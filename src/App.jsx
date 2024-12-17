@@ -33,7 +33,7 @@ function App() {
 
             const word = words[category][Math.floor(Math.random() * words[category].length)]
 
-            console.log(word);
+            //console.log(word);
 
             return {word, category};
         }, [words]);
@@ -70,14 +70,14 @@ function App() {
                     ...actualGuessed,
                     normalizerdLetter
                 ]);
-            console.log("palavra certa: " + guessedLetter);
+
             } else {
                 setWrongLetter((actualWrong)=> [
                     ...actualWrong,
                     normalizerdLetter
                 ]);
                 setGuesse((actualGuesses) => actualGuesses - 1);
-            console.log("palavra errada: " + wrongLetter);
+
             }
         };
 
